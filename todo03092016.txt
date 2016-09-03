@@ -1,0 +1,4 @@
+1) Cover Cards and score of the Player Computer tillthe button stop pressed
+2) Let person give his name himself
+3) Front-end
+4) Namespaces?
