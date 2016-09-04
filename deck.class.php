@@ -38,7 +38,6 @@ class Deck {
 				$card->suit = $suit;
 				$card->value = $value; 
 
-				//$this->_cards = array ("faces" => $face, "suits" => $suit, "value" => $value);
 				array_push($this->_cards, $card);
 			}
 		}
@@ -54,9 +53,6 @@ class Deck {
 	public function showScoreCards() {
 		foreach ($this->_cards as $card) {
 			$card_value = $card->getTheCardValue();
-			//echo 'card value is ' . $card_value;
-			//print_r ($card->getTheCardValue());
-			//print_r($card->value . "   ");
 		}
 	}
 

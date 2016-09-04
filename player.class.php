@@ -1,7 +1,8 @@
 <?php
 class Player {
 
-	public $hand = ar
+	public $hand = array();
+	public $allowMoreCards = true;
 	public $name;
 
 	function __construct($playersName) {
@@ -12,15 +13,14 @@ class Player {
 	public function addCardToHand($card) {
 		array_push($this->hand, $card);
 		return $this->hand;
-		// shuffle($this->deck);
 	}
 
 	public function showHand($staticPartOfthePath) {
 		foreach ($this->hand as $card) {
 			echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
 
+			//make card as a local variable 
 		}
-
 	}
 
 	public function calculateScoreInHand() {

@@ -1,4 +1,6 @@
-1) Cover Cards and score of the Player Computer tillthe button stop pressed
-2) Let person give his name himself
-3) Front-end
-4) Namespaces?
+1) A little bit front-end
+2) Cover Cards and score of the Player Computer tillthe button stop pressed
+3) Let person give his name himself
+4) Case "score 22" - leave oly two Aces
+4) Front-end
+5) Namespaces?

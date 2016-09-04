@@ -39,16 +39,6 @@ if (isset($button)) {
  	echo 'Please press the button'; 
  }
 
-
-//$_SESSION['new_game'] = new Game();
-//$_SESSION['new_game']->startGame();
-//$_SESSION['new_game']->deck->showDeckCards();
-//var_dump($deckBack);
-//var_dump($game->deck);
-//this function makes a string of cards
-//$game->deck->showDeckCards();
-//var_dump($game);
-
 ?>
 
 <html>

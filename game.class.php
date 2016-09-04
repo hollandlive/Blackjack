@@ -11,7 +11,6 @@ class Game {
 
 	public function startGame(){
 		$this->deck = new Deck();
-		//var_dump($deck);
 		shuffle($this->deck->_cards);
 		$players = array(new Computer('computer'), new Human('artem'));
 		$players[0]->addCardToHand(array_shift($this->deck->_cards));
@@ -72,20 +71,21 @@ class Game {
 		if ($players[0]->calculateScoreInHand() > $players[1]->calculateScoreInHand() && ($players[0]->calculateScoreInHand() <= 22)) {
 			echo "<br>" . "<br>" . "<br>";
 			echo "computer win";
-		} elseif ($players[0]->calculateScoreInHand() < $players[1]->calculateScoreInHand()) {
+		} elseif ($players[0]->calculateScoreInHand() < $players[1]->calculateScoreInHand() && ($players[1]->calculateScoreInHand() <= 22)) {
 			echo "<br>" . "<br>" . "<br>";
 			echo "art win";
 		} elseif ($players[0]->calculateScoreInHand() == $players[1]->calculateScoreInHand()) {
 			echo "<br>" . "<br>" . "<br>";
 			echo "Y O U    A R E   T I E!!!";
-		} else {
-			echo "i dont know";
+		} elseif ($players[0]->calculateScoreInHand() > $players[1]->calculateScoreInHand() && ($players[0]->calculateScoreInHand() > 22)) {
+			echo "<br>" . "<br>" . "<br>";
+			echo "computer lost";	
+			}  
+		else {
+			echo "<br>" . "<br>" . "<br>";
+			echo "computer win";
 		}
-
+		}
 	}
-
-}
-
-
 
 ?>
