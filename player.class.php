@@ -1,8 +1,7 @@
 <?php
 class Player {
 
-	public $hand = array();
-	public $allowMoreCards = true;
+	public $hand = ar
 	public $name;
 
 	function __construct($playersName) {
@@ -20,15 +19,8 @@ class Player {
 		foreach ($this->hand as $card) {
 			echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
 
-			//make card as a local variable 
-			// 
-
-
-		//var_dump($this->hand);
-		//echo "<img src = '/cards'" . $this-linkToImage . ">";
 		}
 
-		//var_dump($this->hand);
 	}
 
 	public function calculateScoreInHand() {
@@ -39,24 +31,9 @@ class Player {
 				$totalScoreinHand += $cardValue->value;
 			}
 		}
-	//echo "This player has" . $totalScoreinHand . "</br></br>";
 
 	return $totalScoreinHand;
 	}
-		//foreach ($this->hand as $handScore) {
-			//$total = $handScore->getTheCardValue();
-			//$total += $handScore->getTheCardValue();
-			//echo $total;
-			//print_r($total);
-			//echo "the score is";
-			//print_r($handScore);
-		
-	
-
-
-
-//	public function allowMoreCards();
-//	public function calculateScore();
 	
 }
 
