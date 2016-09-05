@@ -17,7 +17,8 @@ class Game {
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
 		$players[0]->addCardToHand(array_shift($this->deck->_cards));
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
-		echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
+		echo "Player " . $players[0]->name . " has:" . 'secret score' . "</br>" . "</br>";
+                //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
 		$players[0]->showHand('cards/');
 		echo "<br>" . "<br>";
 		echo "Player " . $players[1]->name . " has:" . $players[1]->calculateScoreInHand() . "</br>" . "</br>";
@@ -41,7 +42,8 @@ class Game {
 	}
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
 		echo "<br>" . "<br>";
-		echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
+		echo "Player " . $players[0]->name . " has:" . 'secret score' . "</br>" . "</br>";
+                //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
 
 		$players[0]->showHand('cards/');
 		echo "<br>" . "<br>";

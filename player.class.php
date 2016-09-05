@@ -4,6 +4,8 @@ class Player {
 	public $hand = array();
 	public $allowMoreCards = true;
 	public $name;
+        public $cardVisible;
+        public $scoreVisible;
 
 	function __construct($playersName) {
 		$this->name = $playersName;
@@ -17,8 +19,12 @@ class Player {
 
 	public function showHand($staticPartOfthePath) {
 		foreach ($this->hand as $card) {
+                    if ($this->cardVisible == true) {
 			echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
-
+                    } else {
+                        echo "HIDDEN";
+                        //echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
+                    }
 			//make card as a local variable 
 		}
 	}
@@ -38,11 +44,23 @@ class Player {
 }
 
 class Computer extends Player {
+    
+    public function __construct($playersName)
+    {
+        $this->cardVisible = false;
+        $this->scoreVisible = false;
+        parent::__construct($playersName);
+    }
 
 }
 
 class Human extends Player {
+    
+    public function __construct($playersName)
+    {
+        $this->scoreVisible = true;
+        $this->cardVisible = true;
+        parent::__construct($playersName);
+    }
 	
 }
-
-?>
