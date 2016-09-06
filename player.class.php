@@ -22,7 +22,8 @@ class Player {
                     if ($this->cardVisible == true) {
 			echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
                     } else {
-                        echo "HIDDEN";
+                        echo "<img src = " . "cards/blanc.jpg" . ">";
+
                         //echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
                     }
 			//make card as a local variable 
@@ -50,7 +51,7 @@ class Computer extends Player {
         $this->cardVisible = false;
         $this->scoreVisible = false;
         parent::__construct($playersName);
-    }
+    } 
 
 }
 
