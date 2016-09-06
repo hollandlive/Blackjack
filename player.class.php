@@ -20,9 +20,9 @@ class Player {
 	public function showHand($staticPartOfthePath) {
 		foreach ($this->hand as $card) {
                     if ($this->cardVisible == true) {
-			echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
+			echo "<div class ='card'><img src = " . $card->createImageString($staticPartOfthePath) . "></div>";
                     } else {
-                        echo "<img src = " . "cards/blanc.jpg" . ">";
+                        echo "<div class ='card'><img src = " . "cards/blanc.jpg" . "></div>";
 
                         //echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
                     }
