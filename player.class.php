@@ -17,16 +17,19 @@ class Player {
 		return $this->hand;
 	}
 
-	public function showHand($staticPartOfthePath) {
+	public function showHand($staticPartOfthePath, $gameStatus) {
 		foreach ($this->hand as $card) {
                     if ($this->cardVisible == true) {
 			echo "<div class ='card'><img src = " . $card->createImageString($staticPartOfthePath) . "></div>";
-                    } else {
+                    } elseif ($gameStatus == 'stop') {
+                        echo "<div class ='card'><img src = " . $card->createImageString($staticPartOfthePath) . "></div>";
+                    }
+                        else {
                         echo "<div class ='card'><img src = " . "cards/blanc.jpg" . "></div>";
-
                         //echo "<img src = " . $card->createImageString($staticPartOfthePath) . ">";
                     }
 			//make card as a local variable 
+                    
 		}
 	}
 

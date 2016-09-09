@@ -8,6 +8,7 @@ class Game {
 
 	public $deck;
 	public $players = array();
+        public $gameStatus;
 
 	public function startGame(){
 		$this->deck = new Deck();
@@ -19,10 +20,10 @@ class Game {
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
 		echo "Player " . $players[0]->name . " has:" . 'XX' . "</br>" . "</br>";
                 //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[0]->showHand('cards/');
+		$players[0]->showHand('cards/', $this->gameStatus);
 		echo "<br>" . "<br>";
 		echo "Player " . $players[1]->name . " has:" . $players[1]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[1]->showHand('cards/');
+		$players[1]->showHand('cards/', $this->gameStatus);
 		//save array of two objects PLAYER in to session var
 		$_SESSION['players'] = $players;
 	}
@@ -45,10 +46,10 @@ class Game {
 		echo "Player " . $players[0]->name . " has:" . 'XX' . "</br>" . "</br>";
                 //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
 
-		$players[0]->showHand('cards/');
+		$players[0]->showHand('cards/', $this->gameStatus);
 		echo "<br>" . "<br>";
 		echo "Player " . $players[1]->name . " has:" . $players[1]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[1]->showHand('cards/');
+		$players[1]->showHand('cards/', $this->gameStatus);
 		//save array of two objects PLAYER in to session var
 		$_SESSION['players'] = $players;
 	}
@@ -58,10 +59,10 @@ class Game {
 		$players = $_SESSION['players'];
 		echo "<br>" . "<br>";
 		echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[0]->showHand('cards/');
+		$players[0]->showHand('cards/', $this->gameStatus);
 		echo "<br>" . "<br>";
 		echo "Player " . $players[1]->name . " has:" . $players[1]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[1]->showHand('cards/');
+		$players[1]->showHand('cards/', $this->gameStatus);
 		//save array of two objects PLAYER in to session var
 		$_SESSION['players'] = $players;
 	}

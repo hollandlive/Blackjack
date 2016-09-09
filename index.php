@@ -30,12 +30,6 @@ session_start();
 
         <h3 class="text-muted">BlackJack</h3>
       </div>
-
-      <div class="jumbotron">
-        <h1>Welcome to BlackJack</h1>
-        <p class="lead">The rules of BJ are simple</p>
-       
-      </div>
         
         
                 
@@ -51,6 +45,7 @@ if (isset($button)) {
 		case 'newgame':
 			//echo "new game pressed";
 			$game = new Game();
+                        $game->gameStatus = $button;
 			$game->startGame();
 			$game->deck->showDeckCards();
 			//$game->deck->showScoreCards();
@@ -60,12 +55,14 @@ if (isset($button)) {
                 case 'play':
 			$game = unserialize($_SESSION['newgame']);
 			//print_r($game->deck);
+                        $game->gameStatus = $button;
 			$game->playButtonPressed();
 			$_SESSION['newgame'] = serialize($game);
 			//print_r($_SESSION['newgame']);
 			break;
 		case 'stop':
 			$game = unserialize($_SESSION['newgame']);
+                        $game->gameStatus = $button;
 			$game->stopGame();
 			$game->checkTheWinner();
 			break;

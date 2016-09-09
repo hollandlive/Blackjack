@@ -1,0 +1,21 @@
+{
+  "name": "blackjack",
+  "description": "black jack game in PHP Artem Aksenov Amsterdam I did it first in september 2015, but now rewritten it in \"real\" OOP (previously it was just one class, which wasn't a nice example:)",
+  "main": "index.js",
+  "authors": [
+    "Artem Aksenov <hollandlive@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hollandlive/blackjack",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
