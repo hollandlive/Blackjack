@@ -13,12 +13,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>BlackJack Game v 1.0 </title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css" type="text/css"  />
+    <!--<link rel="stylesheet" href="css/app.css" type="text/css"  />-->
     </head>
 
     <body>
@@ -26,10 +26,14 @@ session_start();
         
         
     <div class="container">
-      <div class="header clearfix">
-
-        <h3 class="text-muted">BlackJack</h3>
-      </div>
+ 
+        <div class ="jumbotron">        
+                    <form name="form" method="post" action="">
+		<button class ="btn btn-info" name="button" value="newgame" type="submit">New Game</button>
+		<button class ="btn btn-danger" name="button" value="play" type="submit">Play</button>
+		<button class ="btn btn-success" name="button" value="stop" type="submit">Stop</button>
+	</form >
+        </div>
         
         
                 
@@ -71,26 +75,17 @@ if (isset($button)) {
 	}
 
  } else { 
- 	echo 'Please press the button'; 
+ 	echo "<nav class=\"navbar navbar-default navbar-fixed-top\"><h2>" . 'Please press the button' . "</h2></nav>"; 
  }
 
 ?>
-        <div class ="jumbotron">        
-        <form name="form" method="post" action="">
-		<button class ="btn btn-info" name="button" value="newgame" type="submit">New Game</button>
-		<button class ="btn btn-danger" name="button" value="play" type="submit">Play</button>
-		<button class ="btn btn-success" name="button" value="stop" type="submit">Stop</button>
-	</form >
-        </div>
-               
-     
 
     </div>
 	
-	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>	
 
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>

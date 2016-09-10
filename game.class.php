@@ -18,12 +18,15 @@ class Game {
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
 		$players[0]->addCardToHand(array_shift($this->deck->_cards));
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
-		echo "Player " . $players[0]->name . " has:" . 'XX' . "</br>" . "</br>";
+                echo "<div class=\"fullscreen\">";
+		echo "<div class=\"row\"><div class=\"col-md-6\"><p>" . $players[0]->name . " has:" . 'XX' . "</p>";
                 //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[0]->showHand('cards/', $this->gameStatus);
-		echo "<br>" . "<br>";
-		echo "Player " . $players[1]->name . " has:" . $players[1]->calculateScoreInHand() . "</br>" . "</br>";
-		$players[1]->showHand('cards/', $this->gameStatus);
+		echo $players[0]->showHand('cards/', $this->gameStatus) . "</div>";
+		//echo "<br>" . "<br>";
+		echo "<div class=\"col-md-6\"><p>" . $players[1]->name . " has: " . $players[1]->calculateScoreInHand(). "</p>";
+		echo $players[1]->showHand('cards/', $this->gameStatus) . "</div></div>";
+               
+                echo "</div>";
 		//save array of two objects PLAYER in to session var
 		$_SESSION['players'] = $players;
 	}
