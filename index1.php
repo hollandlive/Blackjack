@@ -4,17 +4,28 @@ require_once "deck.class.php";
 require_once "player.class.php";
 
 session_start(); 
-?>
+
+require 'vendor/mustache/mustache/src/Mustache/Autoloader.php';
+Mustache_Autoloader::register();
 
 
-            
-            
 
-        
-        
-                
+//echo scandir(__FILE__); 
 
-<?php
+
+$m = new Mustache_Engine(array(
+    'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__) . '/views'),
+));
+
+
+
+ echo $m->getLoader()->load();
+// loads template from `views/hello_world.mustache` and renders it.
+//echo $m->render('/views/hello_world', array('planet' => 'world'));
+
+// loads template from `views/hello_world.mustache` and renders it.
+//echo $m->render('hello_world', array('planet' => 'world'));
+
 
 if (!empty($_POST['button'])) {
 	$button = $_POST['button']; 
