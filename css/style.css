@@ -41,7 +41,7 @@ body { padding-top: 80px; }
   
   background: url('../img/bckgr.jpg') no-repeat center center fixed; 
   width: auto;
-  
+  color: white;
   margin: 0;
   padding: 0;
   background-size: cover;
