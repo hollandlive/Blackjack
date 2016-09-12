@@ -5,28 +5,35 @@
 // 1 card to Computer, 1 card - to Human
 // 2nd card to Computer, 1 card - to Human
 class Game {
-
+        
+        
 	public $deck;
 	public $players = array();
         public $gameStatus;
 
 	public function startGame(){
+                
 		$this->deck = new Deck();
 		shuffle($this->deck->_cards);
+                
 		$players = array(new Computer('computer'), new Human('artem'));
 		$players[0]->addCardToHand(array_shift($this->deck->_cards));
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
 		$players[0]->addCardToHand(array_shift($this->deck->_cards));
 		$players[1]->addCardToHand(array_shift($this->deck->_cards));
-                echo "<div class=\"fullscreen\">";
-		echo "<div class=\"row\"><div class=\"col-md-6\"><p>" . $players[0]->name . " has:" . 'XX' . "</p>";
+                $players[0]->name;
+                $players[0]->calculateScoreInHand();
+                $players[0]->showHand('cards/', $this->gameStatus);
+                $players[1]->showHand('cards/', $this->gameStatus);
+                //echo "<div class=\"fullscreen\">";
+		//echo "<div class=\"row\"><div class=\"col-md-6\"><p>" . $players[0]->name . " has:" . 'XX' . "</p>";
                 //echo "Player " . $players[0]->name . " has:" . $players[0]->calculateScoreInHand() . "</br>" . "</br>";
-		echo $players[0]->showHand('cards/', $this->gameStatus) . "</div>";
+		//echo $players[0]->showHand('cards/', $this->gameStatus) . "</div>";
 		//echo "<br>" . "<br>";
-		echo "<div class=\"col-md-6\"><p>" . $players[1]->name . " has: " . $players[1]->calculateScoreInHand(). "</p>";
-		echo $players[1]->showHand('cards/', $this->gameStatus) . "</div></div>";
+		//echo "<div class=\"col-md-6\"><p>" . $players[1]->name . " has: " . $players[1]->calculateScoreInHand(). "</p>";
+		//echo $players[1]->showHand('cards/', $this->gameStatus) . "</div></div>";
                
-                echo "</div>";
+                //echo "</div>";
 		//save array of two objects PLAYER in to session var
 		$_SESSION['players'] = $players;
 	}
