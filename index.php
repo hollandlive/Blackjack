@@ -1,12 +1,15 @@
 <?php
-require_once 'game.class.php'; 
+
+//update 2021
+
+require_once 'game.class.php';
 require_once "deck.class.php";
 require_once "player.class.php";
 
-session_start(); 
+session_start();
 
 if (!empty($_POST['button'])) {
-	$button = $_POST['button']; 
+	$button = $_POST['button'];
 }
 
 if (isset($button)) {
@@ -35,8 +38,8 @@ if (isset($button)) {
 			echo "you ve not pressed anything fucker";
 	}
 
- } else { 
- 	echo 'Please press the button'; 
+ } else {
+ 	echo 'Please press the button';
  }
 
 ?>
@@ -52,7 +55,7 @@ if (isset($button)) {
 	</head>
 
 	<body>
-	
+
 	<form name="form" method="post" action="">
 		<button class ="btn btn-info" name="button" value="newgame" type="submit">New Game</button>
 		<button class ="btn btn-danger" name="button" value="play" type="submit">Play</button>
