@@ -1,6 +1,6 @@
 <?php
 
-//update 2021
+// Update 2021
 class Card {
 	public $suit;
 	public $face;
