@@ -4,3 +4,9 @@
 4) Case "score 22" - leave oly two Aces
 4) Front-end
 5) Namespaces?
+
+11-06-21
+
+(No commits are shown on GitHub)
+
+v 2.0
