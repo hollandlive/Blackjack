@@ -1,11 +1,13 @@
 <?php
+
+//update 
 class Card {
 	public $suit;
-	public $face; 
+	public $face;
 	public $value;
 
 	public function createImageString($basePathToImage) {
-		$linkToImage = $basePathToImage . $this->face . $this->suit . '.jpg'; 
+		$linkToImage = $basePathToImage . $this->face . $this->suit . '.jpg';
 		return $linkToImage;
 	}
 
