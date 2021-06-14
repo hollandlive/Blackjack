@@ -13,3 +13,6 @@ PS changed email in settings
 13-06-21
 
 Free day today
+
+14-06-21
+commits to be shown on Github fixed (wrong email)
